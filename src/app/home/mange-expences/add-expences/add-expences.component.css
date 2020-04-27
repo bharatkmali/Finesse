@@ -1,0 +1,14 @@
+
+
+body{
+    font-family: sans-serif;
+    background: url(E:\anguler\finesses\src\assets\image\2.png);
+    background-size: cover;
+    height: 100vh;
+
+}
+.form{
+    border-radius: 2px;
+    box-shadow:  2px 2px 10px 10px cornflowerblue;
+    margin-top: 20%
+}

@@ -1,0 +1,63 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms'
+
+import { AuthComponent } from './auth/auth.component';
+import { AuthheaderComponent } from './shared/authheader/authheader.component';
+import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { ExpenceSummaryComponent } from './home/expence-summary/expence-summary.component';
+import { ManageCatagoriesComponent } from './home/manage-catagories/manage-catagories.component';
+import { MangeExpencesComponent } from './home/mange-expences/mange-expences.component';
+import { AddCatagoriesComponent } from './home/manage-catagories/add-catagories/add-catagories.component';
+import { EditCategoryComponent } from './home/manage-catagories/edit-category/edit-category.component';
+import { AllCategoryComponent } from './home/manage-catagories/all-category/all-category.component';
+import { AddExpencesComponent } from './home/mange-expences/add-expences/add-expences.component';
+import { EditExpencesComponent } from './home/mange-expences/edit-expences/edit-expences.component';
+import { AllExpencesComponent } from './home/mange-expences/all-expences/all-expences.component';
+
+
+
+
+  
+@NgModule({
+  declarations: [
+    AppComponent,
+    
+    ResetPasswordComponent,
+    SignInComponent,
+    HeaderComponent,
+    FooterComponent,
+    SignUpComponent,
+    AuthComponent,
+    AuthheaderComponent,
+    HomeComponent,
+    DashboardComponent,
+    ExpenceSummaryComponent,
+    ManageCatagoriesComponent,
+    MangeExpencesComponent,
+    AddCatagoriesComponent,
+    EditCategoryComponent,
+    AllCategoryComponent,
+    AddExpencesComponent,
+    EditExpencesComponent,
+    AllExpencesComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

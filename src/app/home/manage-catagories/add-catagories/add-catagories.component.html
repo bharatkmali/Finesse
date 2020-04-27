@@ -1,0 +1,17 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                    
+                <form class="bg-light text-center p-4">
+                    <h2 class="text-center py-3 text-info">Add Category</h2>
+                    <input type="text" [(ngModel)]="category.name" class="form-control border-dark" name="add" placeholder="Enter category">
+                    <br>
+                    <input type="text" [(ngModel)]="category.amount" class="form-control border-dark" name="add" placeholder="Enter amount">
+                    <br>
+                    <button type="submit" (click)="addcategory()" class="btn btn-success px-5" style="font-size: 20px;" name="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
