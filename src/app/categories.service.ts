@@ -12,7 +12,7 @@ categories=[]
 
 addcat(category){
  this.categories.push(category) 
- console.log(category)
+ console.log(this.categories)
 
 }
 

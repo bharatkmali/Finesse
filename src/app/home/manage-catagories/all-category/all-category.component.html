@@ -1,8 +1,8 @@
 <body>
 <div class="container">
   <div class="row py-5">
-    <div class="col-lg-12 text-center ">
-        <button type="submit" routerLink="/Home/manage-catagories/add-catagories" class="btn btn-dark" name="addcategory">Add Categories</button>
+    <div class="col-lg-12 text-right px-5">
+        <button type="submit" routerLink="/Home/manage-catagories/add-catagories" class="btn btn-dark " name="addcategory">+Add Categories</button>
     </div>
     
     <div class="col-lg-12 col-12 py-4">
@@ -11,14 +11,14 @@
         <thead class="text-center">
           <tr>
             <th scope="col"></th>
-            <th scope="col">Categeroies</th>
-            <th scope="col">amount</th>
+            <th scope="col">Category</th>
+            <th scope="col">Date</th>
             <th scope="col">Edit categories</th>
             <th scope="col">Delete category</th>
           </tr>
         </thead>
         <tbody class="text-center">
-          <tr *ngFor="let category of items,let i=index">
+          <tr *ngFor="let category of items; let i=index">
             <th scope="row">{{i+1}}</th>
             <td>{{category.name}}</td>
             <td>{{category.amount}} </td>
@@ -34,4 +34,3 @@
 </div>
 </body>
   
-  <!-- <router-outlet></router-outlet> -->
