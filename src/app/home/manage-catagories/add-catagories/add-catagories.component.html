@@ -7,7 +7,7 @@
                     <h2 class="text-center py-3 text-info">Add Category</h2>
                     <input type="text" [(ngModel)]="category.name" class="form-control border-dark" name="add" placeholder="Enter category">
                     <br>
-                    <input type="text" [(ngModel)]="category.amount" class="form-control border-dark" name="add" placeholder="Enter Date">
+                    <input type="date" [(ngModel)]="category.date" class="form-control border-dark" name="add" placeholder="Enter Date">
                     <br>
                     <button type="submit" (click)="addcategory()" class="btn btn-success px-5" style="font-size: 20px;" name="submit">+Add</button>
                 </form>

@@ -1,35 +1,51 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class CategoriesService {
-  constructor() {}
+  constructor(public firebase:AngularFirestore) {}
 categories=[]
 
 
 
 addcat(category){
- this.categories.push(category) 
- console.log(this.categories)
+//  this.categories.push(category) 
+//  console.log(this.categories)
+this.firebase.collection("categories").add(category)
 
 }
 
 getallcategory(){
-  return this.categories
+  // return this.categories
+  return this.firebase.collection("categories").snapshotChanges().pipe(
+    map(actions => actions.map(a => {
+      const data = a.payload.doc.data() as any;
+      const id = a.payload.doc.id;
+      return { id, ...data };
+    }))
+  );
 }
 
 editcat(index,newcategroy){
-   this.categories[index]=newcategroy
+  //  this.categories[index]=newcategroy
+  this.firebase.collection("categories").doc(index).update(newcategroy)
 }
  
-deletecat(index){
-this.categories.splice(index,1)
+deletecat(i){
+// this.categories.splice(index,1)
+this.firebase.collection("categories").doc(i).delete()
 }
 
-getcategory(index){
-  return this.categories[index]
-}
+// getcategory(index){
+//   return this.categories[index]
+// }
 
+getcategory(id){
+  return this.firebase.collection("categories").doc(id).valueChanges()
+
+}
 }

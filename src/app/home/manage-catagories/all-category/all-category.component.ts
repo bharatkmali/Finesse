@@ -13,7 +13,10 @@ export class AllCategoryComponent implements OnInit {
   constructor(public service:CategoriesService) { }
 
   ngOnInit(): void {
-    this.items=this.service.getallcategory() 
+    // this.items=this.service.getallcategory() 
+    this.service.getallcategory().subscribe(result=>{
+      this.items=result
+    })
   }
   
   deletebutton(i){

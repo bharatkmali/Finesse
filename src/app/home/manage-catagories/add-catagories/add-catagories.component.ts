@@ -9,16 +9,16 @@ import { Router } from '@angular/router';
 })
 export class AddCatagoriesComponent implements OnInit {
 
-  category:{name:string,amount:string}={name:"",amount:""}
+  category:{name:string,date:string}={name:"",date:""}
    
   constructor(public service:CategoriesService,public router:Router) { 
 
   }
   addcategory(){
-    let newcategory={name:this.category.name,amount:this.category.amount}
+    let newcategory={name:this.category.name,date:this.category.date}
     this.service.addcat(newcategory)
     this.category.name=""
-    this.category.amount=""
+    this.category.date=""
     this.router.navigateByUrl("/Home/manage-catagories")
   
   }

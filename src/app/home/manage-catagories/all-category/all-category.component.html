@@ -10,7 +10,7 @@
       <table class="table table-striped bg-light col-12">
         <thead class="text-center">
           <tr>
-            <th scope="col"></th>
+            <th scope="col">Id</th>
             <th scope="col">Category</th>
             <th scope="col">Date</th>
             <th scope="col">Edit categories</th>
@@ -18,12 +18,12 @@
           </tr>
         </thead>
         <tbody class="text-center">
-          <tr *ngFor="let category of items; let i=index">
-            <th scope="row">{{i+1}}</th>
+          <tr *ngFor="let category of items;">
+            <th scope="row">{{category.id}}</th>
             <td>{{category.name}}</td>
-            <td>{{category.amount}} </td>
-            <td><button type="submit" class="btn btn-primary" routerLink="/Home/manage-catagories/edit-category/{{i}}" name="editcategory">Edit</button></td>
-            <td><button type="submit" (click)="deletebutton(i)" class="btn btn-danger" name="deletecategory">Delete</button></td>
+            <td>{{category.date}} </td>
+            <td><button type="submit" class="btn btn-primary" routerLink="/Home/manage-catagories/edit-category/{{category.id}}" name="editcategory">Edit</button></td>
+            <td><button type="submit" (click)="deletebutton(category.id)" class="btn btn-danger" name="deletecategory">Delete</button></td>
           </tr>
         </tbody>
       </table>

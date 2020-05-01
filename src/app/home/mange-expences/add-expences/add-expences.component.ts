@@ -26,7 +26,7 @@ export class AddExpencesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.categories=this.mycategory.getallcategory()
+    // this.categories=this.mycategory.getallcategory()
   }
   
 

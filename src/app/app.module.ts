@@ -24,7 +24,9 @@ import { AllCategoryComponent } from './home/manage-catagories/all-category/all-
 import { AddExpencesComponent } from './home/mange-expences/add-expences/add-expences.component';
 import { EditExpencesComponent } from './home/mange-expences/edit-expences/edit-expences.component';
 import { AllExpencesComponent } from './home/mange-expences/all-expences/all-expences.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 
@@ -55,7 +57,9 @@ import { AllExpencesComponent } from './home/mange-expences/all-expences/all-exp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
