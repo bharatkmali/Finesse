@@ -12,13 +12,14 @@ export class ExpencesService {
 
   add(expense){
     // this.expencess.push(expense)
-    console.log(expense)
+    // console.log(expense)
+    this.firebase.collection("expencess").add(expense)
    
   }
 
   getexpense(){
     // return this.expencess
-    this.firebase.collection("expencess").snapshotChanges().pipe(
+    return this.firebase.collection("expencess").snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as any;
         const id = a.payload.doc.id;
@@ -26,14 +27,17 @@ export class ExpencesService {
       }))
     );
   }
-  delexpense(index){
-   this.expencess.splice(index,1)
+  delexpense(i){
+  //  this.expencess.splice(index,1)
+    this.firebase.collection("expencess").doc(i).delete()
   }
   editexpense(index,update){
-    this.expencess[index]=update
+    // this.expencess[index]=update
+    this.firebase.collection("expencess").doc(index).update(update)
   }
-  getupdate(index)
+  getupdate(id)
   {
-    return this.expencess[index]
+    // return this.expencess[index]
+    return this.firebase.collection("expencess").doc(id).valueChanges()
   }
 }

@@ -22,8 +22,8 @@
                 <th scope="row">{{i+1}}</th>
                 <td>{{item.name}}</td>
                 <td>{{item.amount}}</td>
-                <td><button type="submit" class="btn btn-primary" routerLink="/Home/mange-expences/edit-expences/{{i}}" >Edit</button></td>
-                <td><button type="submit" class="btn btn-danger" (click)="deletebutton(i)" >Delete</button></td>
+                <td><button type="submit" class="btn btn-primary" routerLink="/Home/mange-expences/edit-expences/{{item.id}}" >Edit</button></td>
+                <td><button type="submit" class="btn btn-danger" (click)="deletebutton(item.id)">Delete</button></td>
               </tr>
               
             </tbody>

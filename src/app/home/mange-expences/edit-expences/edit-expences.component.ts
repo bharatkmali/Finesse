@@ -12,16 +12,19 @@ import { CategoriesService } from 'src/app/categories.service';
 export class EditExpencesComponent implements OnInit {
   categories=[]
 
-  expense:{category:string,name:string,amount:string}={category:"",name:"",amount:""}
+  expense:any
   index
   constructor(public service:ExpencesService,public router:Router,public route:ActivatedRoute,public mycategory:CategoriesService) { }
 
   ngOnInit(): void {
     this.index=this.route.snapshot.paramMap.get("id")
     console.log(this.index)
-    this.expense=this.service.getupdate(this.index)
-    this.categories=this.mycategory.getallcategory()
+    // this.expense=this.service.getupdate(this.index)
+    this.service.getupdate(this.index).subscribe(result=>{
+      this.expense=result
+    // this.categories=this.mycategory.getallcategory()
   
+  })
   }
 
   editbutton(){
