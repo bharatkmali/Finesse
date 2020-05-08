@@ -9,7 +9,7 @@ import { AuthService } from 'src/service/auth.service';
 export class SignUpComponent implements OnInit {
   email
   password
-  
+
   constructor(public auth:AuthService) { }
 
   ngOnInit(): void {
@@ -21,5 +21,9 @@ export class SignUpComponent implements OnInit {
   // }
   signup(){
     this.auth.signup(this.email,this.password)
+  }
+
+  google(){
+    this.auth.signupwithgoogle()
   }
 }

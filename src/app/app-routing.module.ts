@@ -20,7 +20,7 @@ import { AuthgaurdService } from 'src/service/authgaurd.service';
 
 
 const routes: Routes = [
-  
+  {path:"",redirectTo:'managecontrol',pathMatch:'full' },
  {path: 'managecontrol',component:ManagecontrolComponent,canActivate:[AuthgaurdService] , children:[
   { path: '', component: HomeComponent,children:[
     {path:'', component: DashboardComponent},

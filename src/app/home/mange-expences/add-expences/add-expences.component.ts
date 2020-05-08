@@ -29,7 +29,7 @@ export class AddExpencesComponent implements OnInit {
   ngOnInit(): void {
     // this.categories=this.mycategory.getallcategory()
     // this.categories=this.firebase.collection("categories").valueChanges().subscribe()
-    this.firebase.collection("categories").valueChanges().subscribe(result=>{
+    this.mycategory.getallcategory().subscribe(result=>{
       this.categories=result
     })
 

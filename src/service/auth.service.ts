@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase';
 // import { auth } from 'firebase';
 
 
@@ -60,9 +61,9 @@ export class AuthService {
     getuid(){
       return this.uid
     }
-    // async signupwithgoogle(){
-    //   const result = await this.afauth.signInWithRedirect(new auth.GithubAuthProvider)
-    //  }
+    signupwithgoogle(){
+      this.afauth.signInWithPopup(new auth.GoogleAuthProvider());
+     }
     //  signinwithfacebook(){
     //    return new Promise<any>((resolve, reject) => {
     //      let provider = new this.afauth.auth.FacebookAuthProvider();

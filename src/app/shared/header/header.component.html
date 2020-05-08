@@ -1,32 +1,28 @@
 
-    <nav class="navbar navbar-expand-lg navbar-light row" style="background-color: rgb(55, 97, 177); height: 10%;">
-        <a class="navbar-brand col-lg-2" href="#"><img src="..\assets\image\ai logo.png" alt="logo not found"></a>
-        
-        <div class="collapse navbar-collapse col-lg-8" id="navbarNav">
-          <ul class="navbar-nav px-3" style="font-size: 20px; font-style: bold;">
-            <li class="nav-item active px-2">
-              <a class="nav-link" routerLink="/Home/">Home </a>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(55, 97, 177); height: 10%;">
+        <a class="navbar-brand"><img src="..\assets\image\ai logo.png" alt="logo not found"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 px-2" style="font-size: 20px; font-style: bold;">
+            <li class="nav-item px-2 active">
+              <a class="nav-link text-light" routerLink="/Home/">Home </a>
             </li>
             <li class="nav-item px-2">
-                <a class="nav-link" routerLink="/managecontrol/expence-summary">Expences summ.</a>
-              </li>
-              <li class="nav-item px-2">
-                <a class="nav-link" routerLink="/managecontrol/manage-catagories">Manage Categories</a>
-              </li>
-              <li class="nav-item px-2">
-                <a class="nav-link" routerLink="/managecontrol/mange-expences">Manage Expences</a>
-              </li>
-            </ul>
-            
-              
-            </div>
-            <div class="col-lg-1 text-right">
-              <a class="nav-link btn btn-light" routerLink="/auth">login</a>
-
-            </div>
-            <div class="col-lg-1 text-right">
-              <a class="nav-link btn btn-light" (click)=logout()>logout</a>
-         
+              <a class="nav-link text-light" routerLink="/managecontrol/expence-summary">Expences summ.</a>
+            </li>
+            <li class="nav-item px-2 ">
+              <a class="nav-link text-light" routerLink="/managecontrol/manage-catagories">Manage Categories</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link text-light" routerLink="/managecontrol/mange-expences">Manage Expences</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" style="font-size: 20px; font-style: bold;">
+            <a class="nav-link btn btn-light" (click)=logout()>logout</a>
+          </form>
         </div>
       </nav>
 <router-outlet></router-outlet>

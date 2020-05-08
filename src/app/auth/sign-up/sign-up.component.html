@@ -6,7 +6,7 @@
                         <div class=" bg-light my-5 col-lg-4 col-12 left-box">
                             <h1>Sign Up</h1>
                     
-                            <input type="text"  class="form-control"  placeholder="user name">
+                            <input type="text" class="form-control"  placeholder="user name">
                             <br>
                             <input type="email" [(ngModel)]="email" class="form-control"  placeholder="e-mail">
                             <br>
@@ -26,7 +26,7 @@
                             <br>
                             <button class="social twitter">Log in with twitter</button>
                             <br>
-                            <button class="social google">Log in with Google</button>
+                            <button (click)="google()" class="social google">Log in with Google</button>
 
                         </div>
                         <div class="col-lg-2 my-5"></div>

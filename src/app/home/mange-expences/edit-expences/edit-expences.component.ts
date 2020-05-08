@@ -14,6 +14,7 @@ export class EditExpencesComponent implements OnInit {
 
   expense:any
   index
+  
   constructor(public service:ExpencesService,public router:Router,public route:ActivatedRoute,public mycategory:CategoriesService) { }
 
   ngOnInit(): void {
