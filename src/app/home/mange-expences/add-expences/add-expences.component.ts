@@ -23,7 +23,7 @@ export class AddExpencesComponent implements OnInit {
     this.expense.name=""
     this.expense.amount=""
     this.expense.category=""
-    this.router.navigateByUrl("/Home/mange-expences")
+    this.router.navigateByUrl("/managecontrol/mange-expences")
   }
 
   ngOnInit(): void {

@@ -5,27 +5,27 @@
 
             
             <div class="form col-lg-12 col-md-12 col-12" style="background-color: white;">
-              <form #userdata="ngForm" (ngSubmit)="onSubmit(userdata.value)">                
+              <form #userdata="ngForm" (ngSubmit)="onSubmit(userdata)">                
                   <div class="signinlogo">
                     <img src="..\assets\image\ai logo.png">
                   </div>
                 <div class="form-group">
                   
                   <h3><p>WELCOME TO SIGN-IN</p></h3>
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input name="email" ngModel type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <label>Email address</label>
+                  <input name="email" [(ngModel)]="email" type="email" class="form-control">
+                  
                 </div>
                 <div class="form-group my-1">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" name="password" ngModel class="form-control" id="exampleInputPassword1">
+                  <label>Password</label>
+                  <input type="password" name="password" [(ngModel)]="password" class="form-control" >
                 </div>
                 <div>
                   <a routerLink="/auth/reset-password">Forgat Password</a>
                 </div>
                 
                 
-                <button type="submit" routerLink="/Home" class="btn btn-primary" style="margin-top: 30px;">Sign in</button>
+                <button type="submit" class="btn btn-primary" style="margin-top: 30px;">Sign in</button>
               </form>
 
               </div>

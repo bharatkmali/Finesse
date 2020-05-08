@@ -15,11 +15,11 @@ export class AddCatagoriesComponent implements OnInit {
 
   }
   addcategory(){
-    let newcategory={name:this.category.name,date:this.category.date}
-    this.service.addcat(newcategory)
+    // let newcategory={name:this.category.name,date:this.category.date}
+    this.service.addcat(this.category)
     this.category.name=""
     this.category.date=""
-    this.router.navigateByUrl("/Home/manage-catagories")
+    this.router.navigateByUrl("/managecontrol/manage-catagories")
   
   }
 

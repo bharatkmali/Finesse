@@ -31,7 +31,7 @@ export class EditCategoryComponent implements OnInit {
      this.category.name=""
      this.category.date=""
     
-     this.router.navigateByUrl('/Home/manage-catagories')
+     this.router.navigateByUrl('/managecontrol/manage-catagories')
 
   
 

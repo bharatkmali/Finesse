@@ -23,6 +23,9 @@ export class EditExpencesComponent implements OnInit {
     this.service.getupdate(this.index).subscribe(result=>{
       this.expense=result
     // this.categories=this.mycategory.getallcategory()
+    this.mycategory.getallcategory().subscribe(result=>{
+      this.categories=result
+    })
   
   })
   }
@@ -34,7 +37,7 @@ export class EditExpencesComponent implements OnInit {
     this.expense.amount=""
     this.expense.category=""
     console.log(update)
-    this.router.navigateByUrl("Home/mange-expences")
+    this.router.navigateByUrl("/managecontrol/mange-expences")
 
   }
 }
