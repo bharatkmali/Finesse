@@ -1,1 +1,33 @@
-<p>expence-summary works!</p>
+<div class="container">
+    <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <h2 class="text-center my-3 text-info">Summary About Your Expences</h2>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Sr.no</th>
+            <th scope="col">Expenses</th>
+            <th scope="col">Date</th>
+            <th scope="col">$ pay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of summary,let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.date | date :'longDate'}}</td>
+            <td>$ {{item.amount}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Totle You Pay For Expence</td>
+                <td></td>
+            </tr>
+        </tfoot>
+      </table>
+    </div>
+      <div class="col-2"></div>
+    </div>
+</div>

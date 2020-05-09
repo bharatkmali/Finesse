@@ -12,6 +12,7 @@
               <tr>
                 <th scope="col"></th>
                 <th scope="col">Expense</th>
+                <th scope="col">Date</th>
                 <th scope="col">amount</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
@@ -21,7 +22,8 @@
               <tr *ngFor="let item of items,let i=index">
                 <th scope="row">{{i+1}}</th>
                 <td>{{item.name}}</td>
-                <td>{{item.amount}}</td>
+                <td>{{item.date | date :'longDate'}}</td>
+                <td>$ {{item.amount}}</td>
                 <td><button type="submit" class="btn btn-primary" routerLink="/managecontrol/mange-expences/edit-expences/{{item.id}}" >Edit</button></td>
                 <td><button type="submit" class="btn btn-danger" (click)="deletebutton(item.id)">Delete</button></td>
               </tr>

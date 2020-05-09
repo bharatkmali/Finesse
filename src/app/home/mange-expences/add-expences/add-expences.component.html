@@ -9,10 +9,12 @@
                     <label class="px-1 font-weight-bold">Categories:</label>
                     
                     <select [(ngModel)]="expense.category" class="px-5 border-dark">
-                    <option *ngFor="let category of categories,let i=index" value="{{i}}">{{category.category.name}}</option>
+                    <option *ngFor="let category of categories,let i=index" value="{{category.category.name}}">{{category.category.name}}</option>
                     </select>
                     <br>
                     <input type="text" [(ngModel)]="expense.name" class="form-control border-dark" name="add" placeholder="Enter Expense">
+                    <br>
+                    <input type="date" [(ngModel)]="expense.date" class="form-control border-dark" name="date" placeholder="Enter date">
                     <br>
                     <input type="text" [(ngModel)]="expense.amount" class="form-control border-dark" name="add" placeholder="Enter Amount">
                     <br>      

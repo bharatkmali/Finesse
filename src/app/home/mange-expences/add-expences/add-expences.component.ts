@@ -12,16 +12,17 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class AddExpencesComponent implements OnInit {
 
    categories=[]
-  expense:{category:string,name:string,amount:string}={category:"",name:"",amount:""}
+  expense:{category:any,name:string,date:string,amount:string}={category:"",name:"",date:"",amount:""}
 
   constructor(public service:ExpencesService,public router:Router,public mycategory:CategoriesService,public firebase:AngularFirestore) {
    }
 
   addbutton(){
-    let newexpense={category:this.expense.category,name:this.expense.name,amount:this.expense.amount}
+    let newexpense={category:this.expense.category,name:this.expense.name,date:this.expense.date,amount:this.expense.amount}
     this.service.add(newexpense)
     this.expense.name=""
     this.expense.amount=""
+    this.expense.date=""
     this.expense.category=""
     this.router.navigateByUrl("/managecontrol/mange-expences")
   }
