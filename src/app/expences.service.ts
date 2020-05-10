@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { AuthService } from 'src/service/auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class ExpencesService {
    expencess=[]
    
-  constructor(public firebase:AngularFirestore) { }
+  constructor(public firebase:AngularFirestore,public auth:AuthService) { }
 
   add(expense){
     // this.expencess.push(expense)
@@ -19,7 +20,7 @@ export class ExpencesService {
 
   getexpense(){
     // return this.expencess
-    return this.firebase.collection("expencess").snapshotChanges().pipe(
+    return this.firebase.collection("expencess",ref=>ref.where("uid","==",this.auth.getuid())).snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as any;
         const id = a.payload.doc.id;

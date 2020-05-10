@@ -16,8 +16,8 @@ categories=[]
 addcat(category){
 //  this.categories.push(category) 
 //  console.log(this.categories)
-let newcategory={category,uid:this.auth.getuid()}
-this.firebase.collection("categories").add(newcategory)
+// let newcategory={category,uid:this.auth.getuid()}
+this.firebase.collection("categories").add(category)
 
 }
 
@@ -48,7 +48,7 @@ this.firebase.collection("categories").doc(i).delete()
 // }
 
 getcategory(id){
-  return this.firebase.collection("categories").doc(id).valueChanges()
-
+return this.firebase.collection("categories").doc(id).valueChanges()
+ 
 }
 }

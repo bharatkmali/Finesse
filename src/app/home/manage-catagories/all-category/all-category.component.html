@@ -20,8 +20,8 @@
         <tbody class="text-center">
           <tr *ngFor="let category of items,let i=index">
             <th scope="row">{{i+1}}</th>
-            <td>{{category.category.name}}</td>
-            <td>{{category.category.date}} </td>
+            <td>{{category.name}}</td>
+            <td>{{category.date | date :'longDate'}} </td>
             <td><button type="submit" class="btn btn-primary" routerLink="/managecontrol/manage-catagories/edit-category/{{category.id}}" name="editcategory">Edit</button></td>
             <td><button type="submit" (click)="deletebutton(category.id)" class="btn btn-danger" name="deletecategory">Delete</button></td>
           </tr>

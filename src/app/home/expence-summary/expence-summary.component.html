@@ -1,8 +1,9 @@
 <div class="container">
     <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
         <h2 class="text-center my-3 text-info">Summary About Your Expences</h2>
+        <div class="table-responsive">
     <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -20,14 +21,15 @@
             <td>$ {{item.amount}}</td>
           </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <td>Totle You Pay For Expence</td>
-                <td></td>
-            </tr>
-        </tfoot>
+        <!-- <tfoot>
+            <tfoot>
+                <th colspan="3">Totle</th>
+                <th>{{ item | SumColumn: 'amount'}}</th>
+              </tfoot>
+        </tfoot> -->
       </table>
     </div>
-      <div class="col-2"></div>
+    </div>
+      <div class="col-lg-2"></div>
     </div>
 </div>

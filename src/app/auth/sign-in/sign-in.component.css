@@ -10,23 +10,17 @@ body{
 
 @media only screen and (max-device-width: 400px) {
  body{
-    margin: 0;
+   
     padding: 0px;
     width: 100%;
  }
 
-  .container .row .col-md-12{
-      width: auto;
-      margin: 0px;
-      margin-right: 0px;
-
-  }
   
 }
 .form{
-    margin-left: 50px;
-    margin-right: 90px;
-    margin-top: 150px;
+    
+   
+    margin-top: 120px;
     position: absolute;
     align-items: right;
     padding: 40px;

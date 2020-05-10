@@ -16,6 +16,23 @@ export class ExpenceSummaryComponent implements OnInit {
     })
     
   }
+  // getSum(column) : number {
+  //   let sum = 0;
+  //   for(let i = 0; i < this.summary.length; i++) {
+  //     sum += parseFloat(this.summary[i][column]);
+  //   }
+  //   return sum;
+  // }
+//  filter( 'SumColumn', function(){
+//     return function(item, columnToSum){
+//       let sum = 0;
+//       for (let i = 0; i < item.length; i++){
+//           sum += parseFloat(item[i][columnToSum]) || 0;
+
+//       }
+//         return sum;
+//     }
+//   }
 
 
 }
