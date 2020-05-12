@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase';
-// import { auth } from 'firebase';
+
 
 
 
@@ -31,7 +31,6 @@ export class AuthService {
     this.afauth.signInWithEmailAndPassword(email,password).then(result=>{
       this.uid=result.user.uid
       this.router.navigateByUrl("/managecontrol")
-
     }).catch(err=>{
       alert(err)
     }) 
@@ -53,7 +52,8 @@ export class AuthService {
     this.afauth.createUserWithEmailAndPassword(email,password).then(result=>{
       console.log(result.user.uid)
       this.uid=result.user.uid
-      this.router.navigateByUrl("/managecontrol")
+      // this.SendVerificationMail()
+      // this.router.navigateByUrl("/managecontrol")
     }).catch(err=>{
       alert(err)
     })
@@ -80,4 +80,11 @@ export class AuthService {
     //   this.afauth.signInWithPopup(new auth.FacebookAuthProvider())
     // }
 
-}
+   
+    // SendVerificationMail() {
+    //   return this.afauth.auth.currentUser.sendEmailVerification()
+    //   .then(() => {
+    //     this.router.navigateByUrl("/managecontrol");
+    //   })
+    // }
+  }

@@ -2,7 +2,15 @@
     <div class="row">
     <div class="col-lg-2"></div>
     <div class="col-lg-8">
-        <h2 class="text-center my-3 text-info">Summary About Your Expences</h2>
+        <h2 class="text-center text-monospace my-3 text-info">Summary About Your Expences</h2>
+        <label class="text-secondary text-monospace">Select Category</label>
+        <select (change)="onsubmitcat($event)" class="form-control bg-dark text-light">
+          <option></option>
+          <option *ngFor="let item of category" value="{{item.name}}">
+            {{item.name}} 
+          </option>
+        </select>
+        <br>
         <div class="table-responsive">
     <table class="table">
         <thead class="thead-dark">
@@ -19,6 +27,10 @@
             <td>{{item.name}}</td>
             <td>{{item.date | date :'longDate'}}</td>
             <td>$ {{item.amount}}</td>
+          </tr>
+          <tr class="bg-dark text-light">
+            <td colspan="3" class="text-center">Totle Amount</td>
+            <td>$ {{sum}}</td>
           </tr>
         </tbody>
         <!-- <tfoot>

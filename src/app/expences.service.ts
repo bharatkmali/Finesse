@@ -41,4 +41,7 @@ export class ExpencesService {
     // return this.expencess[index]
     return this.firebase.collection("expencess").doc(id).valueChanges()
   }
+  getcategory(category){
+    
+  }
 }

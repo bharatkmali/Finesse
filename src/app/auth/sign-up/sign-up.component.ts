@@ -7,7 +7,7 @@ import { AuthService } from 'src/service/auth.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  email
+  email:string
   password
   
 
@@ -22,6 +22,7 @@ export class SignUpComponent implements OnInit {
   // }
   signup(){
     this.auth.signup(this.email,this.password)
+
 
   }
 

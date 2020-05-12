@@ -13,7 +13,7 @@ import { AuthService } from 'src/service/auth.service';
 export class AddExpencesComponent implements OnInit {
 
    categories=[]
-  expense:{category:any,name:string,date:string,amount:string}={category:"",name:"",date:"",amount:""}
+  expense:{category:any,name:string,date:string,amount:number}={category:"",name:"",date:"",amount:0 }
 
   constructor(public service:ExpencesService,public router:Router,public mycategory:CategoriesService,public firebase:AngularFirestore,public auth:AuthService) {
    }
@@ -22,7 +22,7 @@ export class AddExpencesComponent implements OnInit {
     let newexpense={category:this.expense.category,name:this.expense.name,date:this.expense.date,amount:this.expense.amount,uid:this.auth.getuid()}
     this.service.add(newexpense)
     this.expense.name=""
-    this.expense.amount=""
+    this.expense.amount=0
     this.expense.date=""
     this.expense.category=""
     this.router.navigateByUrl("/managecontrol/mange-expences")

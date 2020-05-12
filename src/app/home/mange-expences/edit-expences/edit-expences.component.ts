@@ -35,7 +35,7 @@ export class EditExpencesComponent implements OnInit {
     let update={category:this.expense.category,name:this.expense.name,amount:this.expense.amount,date:this.expense.date}
     this.service.editexpense(this.index,update)
     this.expense.name=""
-    this.expense.amount=""
+    this.expense.amount=0
     this.expense.date=""
     this.expense.category=""
     console.log(update)
