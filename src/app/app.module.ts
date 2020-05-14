@@ -31,6 +31,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { ManagecontrolComponent } from './home/managecontrol/managecontrol.component';
 import { AuthService } from 'src/service/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 
@@ -66,7 +67,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    NgbModule
+    NgbModule,
+    CarouselModule.forRoot(),
     
 
   ],

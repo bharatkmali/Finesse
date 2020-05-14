@@ -1,9 +1,18 @@
 
-*{
+/* *{
     font-family: sans-serif;
     
-    background: url(E:\anguler\finesses\src\assets\image\240_F_170809420_0cRhmRa1jlCOUI8M08oEjHGVwXv567Dx.jpg);
+    background: url(E:\anguler\finesses\src\assets\image\business-documents-accounting-with-calculator-pen-magnifying-glass_34152-663.jpg);
     background-size: cover;
     height: 100vh;
+
+} */
+
+/* carousel{
+    height: 400px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+slide{
+    height: 500px;
 
 }

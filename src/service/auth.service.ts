@@ -50,9 +50,9 @@ export class AuthService {
   }
   signup(email,password){
     this.afauth.createUserWithEmailAndPassword(email,password).then(result=>{
-      console.log(result.user.uid)
+      // console.log(result.user.uid)
       this.uid=result.user.uid
-      // this.SendVerificationMail()
+     this.SendVerificationMail()
       // this.router.navigateByUrl("/managecontrol")
     }).catch(err=>{
       alert(err)
@@ -82,9 +82,18 @@ export class AuthService {
 
    
     // SendVerificationMail() {
-    //   return this.afauth.auth.currentUser.sendEmailVerification()
+    //   return this.afauth.currentUser.sendEmailVerification()
     //   .then(() => {
     //     this.router.navigateByUrl("/managecontrol");
     //   })
     // }
+
+    SendVerificationMail(){
+      this.afauth.currentUser.then(res=>{
+        res.sendEmailVerification()
+      }).catch(err=>{
+        alert(err)
+      })
+      
+    }
   }
