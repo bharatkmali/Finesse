@@ -90,7 +90,9 @@ export class AuthService {
 
     SendVerificationMail(){
       this.afauth.currentUser.then(res=>{
-        res.sendEmailVerification()
+        res.sendEmailVerification().then(result=>{})
+        this.router.navigateByUrl("/managecontrol")
+
       }).catch(err=>{
         alert(err)
       })

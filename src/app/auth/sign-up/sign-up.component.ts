@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/service/auth.service';
+import { AngularFirestore } from '@angular/fire/firestore/firestore';
+import { CategoriesService } from 'src/app/categories.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,11 +9,10 @@ import { AuthService } from 'src/service/auth.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  email:string
-  password
   
+  udata:{uname:string,email:string,password:string}={uname:"",email:"",password:""}
 
-  constructor(public auth:AuthService) { }
+  constructor(public auth:AuthService,public service:CategoriesService) { }
 
   ngOnInit(): void {
   }
@@ -21,9 +22,11 @@ export class SignUpComponent implements OnInit {
 
   // }
   signup(){
-    this.auth.signup(this.email,this.password)
-
-
+     let newudata={uname:this.udata.uname,email:this.udata.email,password:this.udata.password}
+     this.service.userdata(newudata)
+     this.auth.signup(this.udata.email,this.udata.password)
+     
+    
   }
 
   google(){

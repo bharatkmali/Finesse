@@ -1,17 +1,19 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-7" style="margin-top: 80px;" >
                     
-               
+               <div class="form bg-light px-4 py-3">
                     <h2 class="text-center py-3 text-info">Edit Category</h2>
                     <input type="text" class="form-control border-dark" [(ngModel)]="category.name" placeholder="Enter category">
                     <br>
                     <input type="date" class="form-control border-dark" [(ngModel)]="category.date" placeholder="Enter amount">
                     <br>
-                    <button type="submit" (click)="editbutton()" class="btn btn-success px-5" style="font-size: 20px;" name="submit">Save</button>
-                
+                    <div class="div text-center py-3">
+                    <button type="submit" (click)="editbutton()" class="btn btn-success " style="font-size: 20px; text-align: center;" name="submit">Save</button>
             </div>
         </div> 
     </div>
+</div>
+</div>
 </body>

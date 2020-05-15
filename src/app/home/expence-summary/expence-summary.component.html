@@ -1,9 +1,10 @@
-<div class="container">
+<div class="summarycss">
+  <div class="container">
     <div class="row">
     <div class="col-lg-2"></div>
-    <div class="col-lg-8">
-        <h2 class="text-center text-monospace my-3 text-info">Summary About Your Expences</h2>
-        <label class="text-secondary text-monospace">Select Category</label>
+    <div class="col-lg-8" style="margin-top: 100px;">
+        <h2 class="text-center text-monospace text-warning  my-3">Summary About Your Expences</h2>
+        <label class="text-dark text-uppercase text-monospace">Select Category</label>
         <select (change)="onsubmitcat($event)" class="form-control bg-dark text-light">
           <option></option>
           <option *ngFor="let item of category" value="{{item.name}}">
@@ -44,4 +45,5 @@
     </div>
       <div class="col-lg-2"></div>
     </div>
+</div>
 </div>

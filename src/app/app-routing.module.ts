@@ -15,14 +15,13 @@ import { EditCategoryComponent } from './home/manage-catagories/edit-category/ed
 import { AllExpencesComponent } from './home/mange-expences/all-expences/all-expences.component';
 import { AddExpencesComponent } from './home/mange-expences/add-expences/add-expences.component';
 import { EditExpencesComponent } from './home/mange-expences/edit-expences/edit-expences.component';
-import { ManagecontrolComponent } from './home/managecontrol/managecontrol.component';
+
 import { AuthgaurdService } from 'src/service/authgaurd.service';
 
 
 const routes: Routes = [
   {path:"",redirectTo:'managecontrol',pathMatch:'full' },
- {path: 'managecontrol',component:ManagecontrolComponent,canActivate:[AuthgaurdService] , children:[
-  { path: '', component: HomeComponent,children:[
+  { path: 'managecontrol', component: HomeComponent,canActivate:[AuthgaurdService] ,children:[
     {path:'', component: DashboardComponent},
     {path:'expence-summary', component: ExpenceSummaryComponent },
     {path: 'manage-catagories', component: ManageCatagoriesComponent,children:[
@@ -36,7 +35,6 @@ const routes: Routes = [
         {path:'edit-expences/:id', component: EditExpencesComponent }
     ]},
   ]},
- ]},
  { path: 'auth', component: AuthComponent,children:[
   {path:'', component: SignInComponent },
   {path:'signup', component: SignUpComponent },

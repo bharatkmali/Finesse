@@ -1,36 +1,38 @@
-
-<div class="container">
-  <div class="row py-5">
-    <div class="col-lg-12 text-right px-5">
-        <button type="submit" routerLink="/managecontrol/manage-catagories/add-catagories" class="btn btn-dark " name="addcategory">+Add Categories</button>
-    </div>
-    
-    <div class="col-lg-12 col-12 py-4">
-      <div class="table-responsive">
-      <table class="table table-striped bg-light col-12">
-        <thead class="text-center">
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Category</th>
-            <th scope="col">Date</th>
-            <th scope="col">Edit categories</th>
-            <th scope="col">Delete category</th>
-          </tr>
-        </thead>
-        <tbody class="text-center">
-          <tr *ngFor="let category of items,let i=index">
-            <th scope="row">{{i+1}}</th>
-            <td>{{category.name}}</td>
-            <td>{{category.date | date :'longDate'}} </td>
-            <td><button type="submit" class="btn btn-primary" routerLink="/managecontrol/manage-catagories/edit-category/{{category.id}}" name="editcategory">Edit</button></td>
-            <td><button type="submit" (click)="deletebutton(category.id)" class="btn btn-danger" name="deletecategory">Delete</button></td>
-          </tr>
-        </tbody>
-      </table>
+<body>
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-lg-12 text-center px-5" style="margin-top: 80px;">
+          <button type="submit" routerLink="/managecontrol/manage-catagories/add-catagories" class="btn btn-dark " name="addcategory">+Add Categories</button>
       </div>
+      
+      <div class="col-lg-12 col-12 py-4">
+        <div class="table-responsive">
+        <table class="table table-striped bg-light col-12">
+          <thead class="text-center">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Category</th>
+              <th scope="col">Date</th>
+              <th scope="col">Edit categories</th>
+              <th scope="col">Delete category</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr *ngFor="let category of items,let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{category.name}}</td>
+              <td>{{category.date | date :'longDate'}} </td>
+              <td><button type="submit" class="btn btn-primary" routerLink="/managecontrol/manage-catagories/edit-category/{{category.id}}" name="editcategory">Edit</button></td>
+              <td><button type="submit" (click)="deletebutton(category.id)" class="btn btn-danger" name="deletecategory">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      
     </div>
-    
   </div>
-</div>
-
+</body> 
+    
   
+

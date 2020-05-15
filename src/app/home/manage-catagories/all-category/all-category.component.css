@@ -1,5 +1,6 @@
-body{
+body {
     background: url(E:\anguler\finesses\src\assets\image\pexels-photo-164686.jpeg);
+    background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }

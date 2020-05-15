@@ -28,7 +28,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from "@angular/fire/auth";
-import { ManagecontrolComponent } from './home/managecontrol/managecontrol.component';
+
 import { AuthService } from 'src/service/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -58,7 +58,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AddExpencesComponent,
     EditExpencesComponent,
     AllExpencesComponent,
-    ManagecontrolComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -51,4 +51,7 @@ getcategory(id){
 return this.firebase.collection("categories").doc(id).valueChanges()
  
 }
+userdata(newudata){
+  this.firebase.collection("udata").add(newudata)
+}
 }
