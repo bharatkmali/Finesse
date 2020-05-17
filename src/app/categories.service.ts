@@ -33,6 +33,17 @@ getallcategory(){
   );
 }
 
+userdata(){
+  return this.firebase.collection("udata",ref=>ref.where("newuid","==",this.auth.getuid())).snapshotChanges().pipe(
+    map(actions => actions.map(a => {
+      const data = a.payload.doc.data() as any;
+      const id = a.payload.doc.id;
+      return { id, ...data };
+      
+    }))
+  );
+}
+
 editcat(index,newcategroy){
   //  this.categories[index]=newcategroy
   this.firebase.collection("categories").doc(index).update(newcategroy)
@@ -51,7 +62,5 @@ getcategory(id){
 return this.firebase.collection("categories").doc(id).valueChanges()
  
 }
-userdata(newudata){
-  this.firebase.collection("udata").add(newudata)
-}
+
 }

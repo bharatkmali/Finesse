@@ -11,7 +11,7 @@ import { Route } from '@angular/compiler/src/core';
 export class AllCategoryComponent implements OnInit {
    items=[]
   constructor(public service:CategoriesService) { }
-
+  // page: number = 1;
   ngOnInit(): void {
     // this.items=this.service.getallcategory() 
     this.service.getallcategory().subscribe(result=>{

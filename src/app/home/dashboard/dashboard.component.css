@@ -12,10 +12,7 @@
     height: 400px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } */
-slide{
-    height: 500px;
 
-}
 /* .page-header {
     background-color: #b2afab;
     background-position: center center;
@@ -63,3 +60,26 @@ body{
     margin-right: auto;
     margin-left: auto;
 } */ 
+/* @media only screen and (max-width: 600px) {
+    .row .col-12{
+      background-image: url(E:\anguler\finesses\src\assets\image\1.png);
+    }
+    .row .col-12 carousel slide{
+        background-image: url(E:\anguler\finesses\src\assets\image\1.png);
+    }
+    .row{
+            height: 100%;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    carousel {
+      
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    carousel{
+      font-size: 30px;
+      background-image: url(E:\anguler\finesses\src\assets\image\1.png);
+    }
+  } */

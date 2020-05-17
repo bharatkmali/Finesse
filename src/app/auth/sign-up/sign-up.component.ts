@@ -23,8 +23,8 @@ export class SignUpComponent implements OnInit {
   // }
   signup(){
      let newudata={uname:this.udata.uname,email:this.udata.email,password:this.udata.password}
-     this.service.userdata(newudata)
-     this.auth.signup(this.udata.email,this.udata.password)
+    //  this.service.userdata(newudata)
+     this.auth.signup(newudata)
      
     
   }

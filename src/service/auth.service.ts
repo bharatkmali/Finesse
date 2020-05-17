@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 
@@ -13,9 +14,10 @@ import { auth } from 'firebase';
 })
 export class AuthService {
   uid=null
+  alldata=null
 
   
-  constructor(public router:Router,public afauth:AngularFireAuth) { 
+  constructor(public router:Router,public afauth:AngularFireAuth, public firebase:AngularFirestore) { 
     this.afauth.authState.subscribe(result=>{
      if(result){
       console.log(result)
@@ -30,6 +32,7 @@ export class AuthService {
   signin(email,password){
     this.afauth.signInWithEmailAndPassword(email,password).then(result=>{
       this.uid=result.user.uid
+
       this.router.navigateByUrl("/managecontrol")
     }).catch(err=>{
       alert(err)
@@ -48,10 +51,13 @@ export class AuthService {
     this.afauth.signOut()
     this.uid=null
   }
-  signup(email,password){
-    this.afauth.createUserWithEmailAndPassword(email,password).then(result=>{
+  signup(udata){
+    this.afauth.createUserWithEmailAndPassword(udata.email,udata.password).then(result=>{
       // console.log(result.user.uid)
+      let newuid=result.user.uid
       this.uid=result.user.uid
+      this.alldata={newuid,...udata}
+      this.firebase.collection("udata").add(this.alldata)
      this.SendVerificationMail()
       // this.router.navigateByUrl("/managecontrol")
     }).catch(err=>{

@@ -33,8 +33,8 @@ import { AuthService } from 'src/service/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
-
-
+// import { NgxPaginationModule } from 'ngx-pagination';
+  
   
 @NgModule({
   declarations: [
@@ -59,6 +59,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     EditExpencesComponent,
     AllExpencesComponent,
     
+
+    
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AngularFireAuthModule,
     NgbModule,
     CarouselModule.forRoot(),
-    
+    // NgxPaginationModule
+
 
   ],
   providers: [
