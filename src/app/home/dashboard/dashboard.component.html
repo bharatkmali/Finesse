@@ -1,57 +1,20 @@
-<!-- <div class="wrapper">
-  <div class="page-header section-dark" style="background-image: url('assets/image/antoine-barres.jpg')">
-      <div class="filter"></div>
-      <div class="content-center">
-          <div class=" wcontainer">
-              <div class="title-brand">
-                  <div class="angular-logo">
-                      <img src="assets/image/angular2-logo.png" alt="">
-                  </div>
-                  <h1 class="presentation-title">Paper Kit 2 Angular</h1>
-                  <div class="fog-low">
-                      <img src="assets/image/fog-low.png" alt="">
-                  </div>
-                  <div class="fog-low right">
-                      <img src="assets/image/fog-low.png" alt="">
-                  </div>
-              </div>
 
-              <h2 class="presentation-subtitle text-center">Free Bootstrap 4 UI Kit for Angular 7</h2>
-          </div>
-      </div>
-      <div class="moving-clouds" style="background-image: url('assets/image/clouds.png'); "></div>
-      
-  </div> -->
-    <div class="row">
+<carousel (activeSlideChange)="log($event)" [interval]="5000" class="d-none d-lg-block">
+      <slide *ngFor="let slide of slides; let index=index">
+        <img [src]="slide.image" alt="image slide" style=" width: 100%;" class="">
      
-      <div class="col-lg-12">
-        <carousel>
-          <slide>
-            <img src="..\assets\image\expensive-management1.png" alt="first slide" style="background-size: cover; width: 100%;" class="d-block">
-            <div class="carousel-caption d-none d-md-block">
-              
-            </div>
-          </slide>
-          <slide>
-            <img src="..\assets\image\notebook-and-pen-beside-red-mug-on-gray-surface-3774057.jpg" alt="second slide" style="background-size: cover; width: 100%;">
-            <div class="carousel-caption d-none d-md-block">
-              
-            </div>
-          </slide>
-          <slide>
-            <img src="..\assets\image\fiduciary-dail-money-management-IKOR.png" alt="third slide" style="background-size: cover; width: 100%;" class="d-block">
-            <div class="carousel-caption d-none d-md-block">
-             
-            </div>
-          </slide>
-        </carousel>
-      </div>
-      <div class="col-12 bg-light text-dark text-center text-capitalize  py-5">
-        <h2 class="">welcome to Ai finense {{udata}}{{google.displayName}} </h2>
-        <img class="img-fluid " src="{{google.photoURL}}">
-        <p>we are provide best </p>
-    </div>
-
-    </div>
+        <div class="carousel-caption">
+          <h4>Slide {{index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
    
-      
+<div class="container">
+  <div class="row welcome">
+    <div class="col-lg-12 col-12">
+        <h2 class="text-center my-5">Hii {{udata}}{{google.displayName}}</h2>
+        <h3>Welcome to Ai finenses. we are provide expenses managment</h3>
+    </div>
+ </div>
+</div>

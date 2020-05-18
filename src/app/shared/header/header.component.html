@@ -1,29 +1,29 @@
-
-      <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500" >
+ 
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed" color-on-scroll="500" >
         <a class="navbar-brand"><img src="..\assets\image\ai logo.png" alt="logo not found"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 px-2" style="font-size: 20px; font-style: bold;">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 px-2" style=" font-style: bold;">
             <li class="nav-item px-2 active">
-              <a class="nav-link text-light" routerLink="/managecontrol">Home </a>
+              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol">Home </a>
             </li>
            
             <li class="nav-item px-2 ">
-              <a class="nav-link text-light" routerLink="/managecontrol/manage-catagories">Manage Categories</a>
+              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/manage-catagories">Manage Categories</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-light" routerLink="/managecontrol/mange-expences">Manage Expences</a>
+              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/mange-expences">Manage Expences</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-light" routerLink="/managecontrol/expence-summary">Expences Summary</a>
+              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/expence-summary">Expences Summary</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0" style="font-size: 20px; font-style: bold;">
+          <form class="form-inline my-1 mx-5 text-uppercase" style="font-style: bold;">
             <a class="nav-link btn btn-light" (click)=logout()>logout</a>
           </form>
         </div>
       </nav>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> 

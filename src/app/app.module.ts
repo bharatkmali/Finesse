@@ -32,6 +32,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AuthService } from 'src/service/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // import { NgxPaginationModule } from 'ngx-pagination';
   
@@ -71,6 +72,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AngularFireAuthModule,
     NgbModule,
     CarouselModule.forRoot(),
+    BrowserAnimationsModule,
     // NgxPaginationModule
 
 
