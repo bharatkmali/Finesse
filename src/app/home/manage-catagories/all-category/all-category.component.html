@@ -1,7 +1,7 @@
 <body>
   <div class="container">
     <div class="row py-5">
-      <div class="col-lg-12 text-center px-5" style="margin-top: 80px;">
+      <div class="col-lg-12 text-center px-5" style="margin-top: 40px;">
           <button type="submit" routerLink="/managecontrol/manage-catagories/add-catagories" class="btn btn-dark " name="addcategory">+Add Categories</button>
       </div>
       
@@ -22,8 +22,8 @@
               <th scope="row">{{i+1}}</th>
               <td>{{category.name}}</td>
               <td>{{category.date | date :'longDate'}} </td>
-              <td><button type="submit" class="btn btn-primary" routerLink="/managecontrol/manage-catagories/edit-category/{{category.id}}" name="editcategory">Edit</button></td>
-              <td><button type="submit" (click)="deletebutton(category.id)" class="btn btn-danger" name="deletecategory">Delete</button></td>
+              <td><button type="submit" class="btn btn-primary mx-3" routerLink="/managecontrol/manage-catagories/edit-category/{{category.id}}" name="editcategory"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+              <td><button type="submit" (click)="deletebutton(category.id)" class="btn btn-danger mx-3" name="deletecategory"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
             </tr>
           </tbody>
         </table>

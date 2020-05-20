@@ -22,9 +22,10 @@ export class AuthService
   constructor(public router:Router,public afauth:AngularFireAuth, public firebase:AngularFirestore) { 
     this.afauth.authState.subscribe(result=>{
      if(result){
-      console.log(result)
+     
       this.router.navigateByUrl("/managecontrol")
       this.uid=result.uid
+      this.emailverify = result.emailVerified
      }
     })
   }

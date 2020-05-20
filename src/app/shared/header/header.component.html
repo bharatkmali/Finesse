@@ -15,15 +15,17 @@
               <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/manage-catagories">Manage Categories</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/mange-expences">Manage Expences</a>
+              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/mange-expences">Manage Expenses</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/expence-summary">Expences Summary</a>
+              <a class="nav-link text-light text-center text-uppercase" routerLink="/managecontrol/expence-summary">Expenses Summary</a>
             </li>
           </ul>
-          <form class="form-inline my-1 mx-5 text-uppercase" style="font-style: bold;">
-            <a class="nav-link btn btn-light" (click)=logout()><i class="fa fa-sign-out" aria-hidden="true"></i> logout</a>
-          </form>
+          <div class="text-center" style="align-items: center;">
+            <form class="form-inline my-1 mx-5 text-uppercase" style="font-style: bold; margin-left: 50%;">
+              <a class="nav-link btn btn-outline-secondary text-light" (click)=logout()><i class="fa fa-sign-out" aria-hidden="true"></i> logout</a>
+            </form>
+          </div>
         </div>
       </nav>
 <router-outlet></router-outlet> 

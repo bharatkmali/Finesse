@@ -13,18 +13,19 @@ import { AuthService } from 'src/service/auth.service';
 export class AddExpencesComponent implements OnInit {
 
    categories=[]
-  expense:{category:any,name:string,date:string,amount:number}={category:"",name:"",date:"",amount:0 }
+  expense:{category:any,name:string,date:string,amount:number,peytype:any}={category:"",name:"",date:"",amount:0,peytype:""}
 
   constructor(public service:ExpencesService,public router:Router,public mycategory:CategoriesService,public firebase:AngularFirestore,public auth:AuthService) {
    }
 
   addbutton(){
-    let newexpense={category:this.expense.category,name:this.expense.name,date:this.expense.date,amount:this.expense.amount,uid:this.auth.getuid()}
+    let newexpense={category:this.expense.category,name:this.expense.name,date:this.expense.date,amount:this.expense.amount,peytype:this.expense.peytype,uid:this.auth.getuid()}
     this.service.add(newexpense)
     this.expense.name=""
     this.expense.amount=0
     this.expense.date=""
     this.expense.category=""
+    this.expense.peytype=""
     this.router.navigateByUrl("/managecontrol/mange-expences")
     console.log(newexpense)
    

@@ -2,7 +2,7 @@
 
 .expensecss{
     font-family: sans-serif;
-    background: url(E:\anguler\finesses\src\assets\image\2.png);
+    background: url(E:\anguler\finesses\src\assets\image\5.jpeg);
     background-size: cover;
     height: 100vh;
     
@@ -11,6 +11,6 @@
 .form{
     border-radius: 1px;
     box-shadow:  2px 2px 8px 8px cornflowerblue;
-    margin-top: 25%
+    margin-top: 18%
     
 }

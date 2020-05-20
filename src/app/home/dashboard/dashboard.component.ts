@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
 slides = [
   {image: 'assets/image/expensive-management1.png'},
   {image: 'assets/image/notebook-and-pen-beside-red-mug-on-gray-surface-3774057.jpg'},
-  {image: 'assets/image/financial-reports-datapine.png'}
+  {image: 'assets/image/3.jpg'}
 ];
 
 log(event: number) {

@@ -17,6 +17,14 @@
                     <br>
                     <input type="number" [(ngModel)]="expense.amount" class="form-control border-dark" name="amount" placeholder="Enter Amount">
                     <br>      
+                    <select [(ngModel)]="expense.peytype" name="peytype" placeholder="Select PaymentType" class="form-control">
+                        <option selected value="Cash">Cash</option>
+                        <option value="Paytm">Paytm</option>
+                        <option value="Phonepe">PhonePe</option>
+                        <option value="Google pay">Google Pay</option>
+                        <option value="Bank">Bank</option>
+                      </select>
+                      <br>
                     <button type="submit" (click)="addbutton()" class="btn btn-success px-5" style="font-size: 20px;" name="submit"><i class="fa fa-plus" aria-hidden="true">&nbsp;Add</i>
                     </button>
                 </div>

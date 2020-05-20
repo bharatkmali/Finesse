@@ -1,7 +1,7 @@
 <div class="expensecss">
     <div class="container">
       <div class="row py-5">
-        <div class="col-lg-12 text-center" style="margin-top: 80px;">
+        <div class="col-lg-12 text-center" style="margin-top: 40px;">
             <button type="submit" routerLink="/managecontrol/mange-expences/add-expences" class="btn btn-dark" name="addcategory">Add Expences</button>
         </div>
         
@@ -15,6 +15,7 @@
                 <th scope="col">Expense</th>
                 <th scope="col">Date</th>
                 <th scope="col">amount</th>
+                <th scope="col">Peyment Type</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
               </tr>
@@ -26,8 +27,9 @@
                 <td>{{item.name}}</td>
                 <td>{{item.date | date :'longDate'}}</td>
                 <td>$ {{item.amount}}</td>
-                <td><button type="submit" class="btn btn-primary" routerLink="/managecontrol/mange-expences/edit-expences/{{item.id}}" >Edit</button></td>
-                <td><i><button type="submit" class="btn btn-danger fad fa-trash-alt " (click)="deletebutton(item.id)">Delete</button> </i></td>
+                <td>{{item.peytype}}</td>
+                <td><button type="submit" class="btn btn-primary mx-3" routerLink="/managecontrol/mange-expences/edit-expences/{{item.id}}" ><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                <td><i><button type="submit" class="btn btn-danger fad fa-trash-alt mx-4" (click)="deletebutton(item.id)"><i class="fa fa-trash" aria-hidden="true"></i></button> </i></td>
               </tr>
               
             </tbody>

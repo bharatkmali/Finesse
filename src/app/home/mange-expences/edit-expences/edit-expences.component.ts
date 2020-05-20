@@ -32,13 +32,13 @@ export class EditExpencesComponent implements OnInit {
   }
 
   editbutton(){
-    let update={category:this.expense.category,name:this.expense.name,amount:this.expense.amount,date:this.expense.date}
+    let update={category:this.expense.category,name:this.expense.name,amount:this.expense.amount,date:this.expense.date,peytype:this.expense.peytype}
     this.service.editexpense(this.index,update)
     this.expense.name=""
     this.expense.amount=0
     this.expense.date=""
     this.expense.category=""
-    console.log(update)
+    this.expense.peytype=""
     this.router.navigateByUrl("/managecontrol/mange-expences")
 
   }
