@@ -53,13 +53,12 @@ export class AuthService {
   }
   signup(udata){
     this.afauth.createUserWithEmailAndPassword(udata.email,udata.password).then(result=>{
-      // console.log(result.user.uid)
       let newuid=result.user.uid
       this.uid=result.user.uid
       this.alldata={newuid,...udata}
       this.firebase.collection("udata").add(this.alldata)
      this.SendVerificationMail()
-      // this.router.navigateByUrl("/managecontrol")
+     
     }).catch(err=>{
       alert(err)
     })
@@ -96,8 +95,10 @@ export class AuthService {
 
     SendVerificationMail(){
       this.afauth.currentUser.then(res=>{
-        res.sendEmailVerification().then(result=>{})
-        this.router.navigateByUrl("/managecontrol")
+        res.sendEmailVerification().then(result=>{
+          
+        })
+        // this.router.navigateByUrl("/managecontrol")
 
       }).catch(err=>{
         alert(err)
