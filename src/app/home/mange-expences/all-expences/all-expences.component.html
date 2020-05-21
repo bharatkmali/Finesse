@@ -26,7 +26,7 @@
                 <td>{{item.category}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.date | date :'longDate'}}</td>
-                <td>$ {{item.amount}}</td>
+                <td><i class="fa fa-rupee"></i> {{item.amount}}</td>
                 <td>{{item.peytype}}</td>
                 <td><button type="submit" class="btn btn-primary mx-3" routerLink="/managecontrol/mange-expences/edit-expences/{{item.id}}" ><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
                 <td><i><button type="submit" class="btn btn-danger fad fa-trash-alt mx-4" (click)="deletebutton(item.id)"><i class="fa fa-trash" aria-hidden="true"></i></button> </i></td>
