@@ -20,4 +20,12 @@ constructor(public auth:AuthService) { }
     console.log(userdata.value)
   }
 
+  resetpassword(){
+    this.auth.resetPassword(this.email)
+    alert("please check your email and click the link then create a newPassword")
+    console.log(this.email)
+  }
+  google(){
+    this.auth.signupwithgoogle()
+  }
 }

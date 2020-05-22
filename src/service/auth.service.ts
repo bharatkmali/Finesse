@@ -19,6 +19,8 @@ export class AuthService
   alldata=null
   emailverify:boolean
   email:boolean = true
+  code:any
+  newpassword:any
   constructor(public router:Router,public afauth:AngularFireAuth, public firebase:AngularFirestore) { 
     this.afauth.authState.subscribe(result=>{
      if(result){
@@ -73,6 +75,17 @@ export class AuthService
     }).catch(err=>{
       alert(err)
     })
+    }
+
+    resetPassword(email: string) {
+      return this.afauth.sendPasswordResetEmail(email)
+        .then(result =>{
+          
+
+        }).catch((error) => console.log(error))
+    
+
+        
     }
     getuid(){
       return this.uid

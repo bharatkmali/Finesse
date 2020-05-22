@@ -11,7 +11,14 @@
                   </div>
                 <div class="form-group">
                   
-                  <h3><p>WELCOME TO SIGN-IN</p></h3>
+                  <h3>WELCOME TO SIGN-IN</h3>
+                  <div class="div text-center mx-2">
+                    <button class="social facebook text-center rounded-circle  mx-2"><i class="fa fa-facebook-official" aria-hidden="true"></i></button>
+              
+                    <button (click)="google()" class="social google rounded-circle mx-2"><i class="fa fa-google" aria-hidden="true"></i></button>
+                  </div>
+                 
+                    <br>
                   <label>Email address</label>
                   <input name="email" [(ngModel)]="email" type="email" class="form-control">
                   
@@ -20,14 +27,17 @@
                   <label>Password</label>
                   <input type="password" name="password" [(ngModel)]="password" class="form-control" >
                 </div>
-                <div>
-                  <a routerLink="/auth/reset-password">Forgot Password</a>
-                  <br>
-                  <a routerLink="/auth/signup">Don't Have An Account? Sing Up</a>
+                <div class="div my-4">
+                  <a routerLink="/auth/signup" >Don't Have An Account? Sing Up</a>
                 </div>
-                
-                
-                <button type="submit" class="btn btn-primary" style="margin-top: 30px;">Sign in</button>
+                <div > 
+                  <a (click)="resetpassword()" class="my-4 text-danger">Forgot Password?</a>
+                </div> 
+                  
+                  <div class="div text-center">
+                <button type="submit" class="btn btn-primary" style="margin-top: 20px; text-align: center;">Sign in</button>
+
+                  </div>
               </form>
 
               </div>
